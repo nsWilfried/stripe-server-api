@@ -26,7 +26,7 @@ app.post("/hello", (req, res) => {
 })
 
 app.post('/create-checkout-session', async (req, res) => {
-    // console.log("je suis l'ensemble des requetes", req.body.data)
+    console.log("je suis l'ensemble des requetes", req.body.data)
     // console.log("je post dans le vide et tout marche bien enfin je pense que tout marche bien")
     const session = await stripe.checkout.sessions.create({
         line_items: [
